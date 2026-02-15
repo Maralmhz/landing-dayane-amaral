@@ -137,8 +137,14 @@ img{ max-width: 100%; display:block; }
   color: var(--muted);
   padding: 8px 10px;
   border-radius: 10px;
+  transition: background .15s ease, color .15s ease;
 }
 .nav a:hover{ background: rgba(15, 23, 42, 0.04); color: var(--text); }
+.nav a.is-active{
+  color: rgba(29, 78, 216, 0.98);
+  background: rgba(29, 78, 216, 0.08);
+  border: 1px solid rgba(29, 78, 216, 0.18);
+}
 
 .nav__cta{
   color: var(--ink) !important;
@@ -233,32 +239,6 @@ img{ max-width: 100%; display:block; }
   color: rgba(11,31,75,0.95);
 }
 
-.checklist{
-  list-style: none;
-  padding: 0;
-  margin: 12px 0 0;
-  display:flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.checklist li{
-  position: relative;
-  padding-left: 26px;
-  color: rgba(11,18,32,0.84);
-  font-size: 13.5px;
-}
-.checklist li:before{
-  content: "";
-  position:absolute;
-  left: 0;
-  top: 5px;
-  width: 14px;
-  height: 14px;
-  border-radius: 6px;
-  background: rgba(29, 78, 216, 0.10);
-  border: 1px solid rgba(29, 78, 216, 0.18);
-}
-
 /* Hero */
 .hero{ position: relative; padding: 64px 0 42px; overflow:hidden; }
 .hero-grid{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 22px; align-items: start; }
@@ -307,16 +287,17 @@ img{ max-width: 100%; display:block; }
 .rating__stars{ letter-spacing: 1px; font-size: 12.5px; }
 .rating__text{ font-size: 12.5px; font-weight: 850; }
 
-.hero-aside{ display:flex; flex-direction: column; gap: 14px; }
-
-.card__title{ margin: 0; font-size: 16px; color: var(--navy); }
-.card__p{ margin: 8px 0 0; color: var(--muted); font-size: 14px; }
-.card--tight{
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 22px;
-  padding: 18px;
-  box-shadow: var(--shadow-2);
+.scarcity{
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(239, 68, 68, 0.22);
+  background: rgba(239, 68, 68, 0.06);
+  color: rgba(127, 29, 29, 0.95);
+  font-weight: 850;
+  font-size: 12.5px;
 }
 
 /* Unified 4E section */
@@ -490,4 +471,5 @@ input:focus{
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
   .btn{ transition: none; }
+  .nav a{ transition: none; }
 }
