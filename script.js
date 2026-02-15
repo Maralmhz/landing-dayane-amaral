@@ -22,11 +22,58 @@
     });
   }
 
+  // Scrollspy: destaca no menu a seção em leitura
+  const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'))
+    .filter(a => a.getAttribute('href') && a.getAttribute('href') !== '#');
+
+  const linkById = new Map();
+  navLinks.forEach((a) => {
+    const id = (a.getAttribute('href') || '').slice(1);
+    if (id) linkById.set(id, a);
+  });
+
+  const sections = Array.from(linkById.keys())
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+
+  function setActive(id) {
+    navLinks.forEach((a) => a.classList.remove('is-active'));
+    const link = linkById.get(id);
+    if (link && !link.classList.contains('nav__cta')) link.classList.add('is-active');
+  }
+
+  if ('IntersectionObserver' in window && sections.length) {
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a, b) => (b.intersectionRatio || 0) - (a.intersectionRatio || 0))[0];
+
+      if (visible && visible.target && visible.target.id) {
+        setActive(visible.target.id);
+      }
+    }, {
+      root: null,
+      threshold: [0.2, 0.35, 0.5],
+      rootMargin: '-30% 0px -55% 0px'
+    });
+
+    sections.forEach((s) => observer.observe(s));
+  } else {
+    const onScroll = () => {
+      const y = window.scrollY + window.innerHeight * 0.35;
+      let current = sections[0]?.id;
+      sections.forEach((s) => {
+        if (s.offsetTop <= y) current = s.id;
+      });
+      if (current) setActive(current);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   const form = document.getElementById('leadForm');
   const success = document.querySelector('.form-success');
 
-  // Se o CTA secundário "Solicitar Apresentação Institucional" for clicado,
-  // marcamos o checkbox automaticamente e levamos ao formulário.
   const presentationLink = document.querySelector('[data-intent="apresentacao"]');
   if (presentationLink) {
     presentationLink.addEventListener('click', () => {
