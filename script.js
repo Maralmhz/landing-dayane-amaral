@@ -25,6 +25,16 @@
   const form = document.getElementById('leadForm');
   const success = document.querySelector('.form-success');
 
+  // Se o CTA secundário "Solicitar Apresentação Institucional" for clicado,
+  // marcamos o checkbox automaticamente e levamos ao formulário.
+  const presentationLink = document.querySelector('[data-intent="apresentacao"]');
+  if (presentationLink) {
+    presentationLink.addEventListener('click', () => {
+      const cb = document.getElementById('apresentacao');
+      if (cb) cb.checked = true;
+    });
+  }
+
   const rules = {
     associacao: (v) => v.trim().length >= 2 || 'Informe o nome da associação.',
     responsavel: (v) => v.trim().length >= 2 || 'Informe o nome do responsável.',
@@ -57,7 +67,7 @@
   }
 
   if (form) {
-    const inputs = Array.from(form.querySelectorAll('input'));
+    const inputs = Array.from(form.querySelectorAll('input')).filter(i => i.type !== 'checkbox');
     inputs.forEach((input) => {
       input.addEventListener('blur', () => validateField(input));
       input.addEventListener('input', () => {
