@@ -35,8 +35,8 @@
 
       <nav class="nav" aria-label="Navegação principal">
         <a href="#metodo-4e">Método 4E</a>
+        <a href="#depoimentos">Elogios</a>
         <a href="#solucoes">Soluções</a>
-        <a href="#como-funciona">Como funciona</a>
         <a href="#contato" class="nav__cta">Agendar diagnóstico</a>
       </nav>
 
@@ -47,13 +47,14 @@
   </header>
 
   <main id="conteudo">
-    <section class="hero" aria-label="Apresentação">
-      <div class="container hero-grid">
+    <!-- Hero: abre com Método 4E + foto -->
+    <section class="hero hero--4e" aria-label="Apresentação">
+      <div class="container hero-grid hero-grid--4e">
         <div class="hero-copy">
           <p class="eyebrow">Exclusivo para associações de proteção veicular</p>
-          <h1>Método 4E para previsibilidade de caixa e diretoria decidindo com dados.</h1>
+          <h1>Método 4E para previsibilidade financeira, governança e expansão com segurança.</h1>
           <p class="subheadline">
-            Consultoria estratégica financeira associativa para reduzir inadimplência, estruturar rotinas, organizar dados e sustentar expansão com governança.
+            Estrutura financeira associativa para reduzir inadimplência, organizar dados e sustentar decisões de diretoria com indicadores confiáveis.
           </p>
 
           <div class="hero-actions">
@@ -61,24 +62,41 @@
             <a class="btn btn--ghost" href="#metodo-4e">Ver o Método 4E</a>
           </div>
 
-          <div class="hero-metrics" aria-label="Foco do trabalho">
-            <div class="metric">
-              <span class="metric__k">Caixa projetado</span>
-              <span class="metric__v">Cenários e agenda de decisão, sem susto no mês.</span>
+          <div class="badge-row" aria-label="Avaliações">
+            <div class="rating" aria-label="Avaliação 5 estrelas">
+              <span class="rating__stars" aria-hidden="true">★★★★★</span>
+              <span class="rating__text">Avaliação 5 estrelas</span>
             </div>
-            <div class="metric">
-              <span class="metric__k">Inadimplência real</span>
-              <span class="metric__v">Medição, causas e rotina de cobrança estruturada.</span>
-            </div>
-            <div class="metric">
-              <span class="metric__k">Dados confiáveis</span>
-              <span class="metric__v">Conciliação e indicadores defensáveis para diretoria.</span>
-            </div>
+            <div class="pill">Diagnóstico (30 dias)</div>
+            <div class="pill">Atendimento limitado</div>
+          </div>
+
+          <div class="grid grid--4e" aria-label="Método 4E">
+            <article class="panel panel--big">
+              <h3>Examinar</h3>
+              <p>Leitura do cenário real: caixa, inadimplência, carteira, rotinas e confiabilidade dos dados.</p>
+            </article>
+            <article class="panel panel--big">
+              <h3>Estruturar</h3>
+              <p>Rotinas, conciliação e indicadores com regra de medição, fechamento e responsabilidades.</p>
+            </article>
+            <article class="panel panel--big">
+              <h3>Estabilizar</h3>
+              <p>Caixa projetado com cenários e controles para reduzir variação e urgência reativa.</p>
+            </article>
+            <article class="panel panel--big">
+              <h3>Expandir</h3>
+              <p>Critérios de crescimento e agenda de diretoria com indicadores para decisão e governança.</p>
+            </article>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Resumo">
-          <div class="card">
+        <aside class="hero-aside" aria-label="Foto e oferta">
+          <figure class="photo photo--hero">
+            <img src="assets/images/dayane.jpeg" alt="Foto institucional de Dayane Amaral" loading="eager" width="980" height="1100" onerror="this.onerror=null;this.src='assets/images/dayane-placeholder.jpg'" />
+          </figure>
+
+          <div class="card card--tight" aria-label="Resumo do diagnóstico">
             <h2 class="card__title">Diagnóstico Estratégico (30 dias)</h2>
             <p class="card__p">Mapeamento remunerado para enxergar a condição real, priorizar correções e orientar o plano de ação.</p>
             <ul class="checklist" role="list">
@@ -88,47 +106,95 @@
               <li>Plano executivo com prioridades</li>
             </ul>
             <a class="btn btn--primary btn--full" href="#contato">Ver agenda</a>
-            <p class="card__fineprint">Atendimento limitado a poucas associações simultaneamente.</p>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="metodo-4e" class="section" aria-label="Método 4E">
+    <!-- Âncora Método 4E (mantida, agora como seção curta/explicativa) -->
+    <section id="metodo-4e" class="section section--compact" aria-label="Método 4E">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow">Método próprio</p>
-          <h2>Método 4E (como a estrutura é construída)</h2>
-          <p>4 etapas para transformar gestão financeira em previsibilidade, governança e capacidade de expansão com base organizada.</p>
+          <p class="eyebrow">Como a estrutura é construída</p>
+          <h2>Método 4E (visão executiva)</h2>
+          <p>O Método 4E aparece logo na abertura; aqui fica a leitura executiva do que muda na rotina financeira.</p>
         </header>
 
-        <div class="grid grid--4">
-          <article class="panel">
-            <h3>Examinar</h3>
-            <p>Leitura do cenário real: caixa, inadimplência, carteira, rotinas e confiabilidade dos dados.</p>
-          </article>
-          <article class="panel">
-            <h3>Estruturar</h3>
-            <p>Rotinas, conciliação e indicadores com regra de medição, fechamento e responsabilidades.</p>
-          </article>
-          <article class="panel">
-            <h3>Estabilizar</h3>
-            <p>Caixa projetado com cenários, ações sobre inadimplência e controles para reduzir variação.</p>
-          </article>
-          <article class="panel">
-            <h3>Expandir</h3>
-            <p>Critérios de crescimento e agenda de diretoria com indicadores para decisão e governança.</p>
-          </article>
-        </div>
-
-        <div class="panel" style="margin-top:16px">
+        <div class="panel panel--wide">
           <h3>O que a diretoria leva</h3>
           <p>Entregáveis em formato executivo: leitura defensável, prioridades claras e ritual de acompanhamento para manter previsibilidade.</p>
         </div>
       </div>
     </section>
 
-    <section id="solucoes" class="section section--alt" aria-label="Soluções financeiras">
+    <!-- Depoimentos / Elogios -->
+    <section id="depoimentos" class="section section--alt" aria-label="Elogios de clientes">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Validação social</p>
+          <h2>Elogios de clientes</h2>
+          <p>Exemplos fictícios (modelo) para você substituir pelos reais quando quiser.</p>
+        </header>
+
+        <div class="grid grid--3 grid--cards">
+          <article class="panel panel--quote">
+            <div class="quote-head">
+              <span class="quote-stars" aria-hidden="true">★★★★★</span>
+              <span class="quote-tag">Diretoria</span>
+            </div>
+            <p class="quote">“Depois do diagnóstico, finalmente tivemos previsibilidade de caixa e uma agenda de decisão clara.”</p>
+            <p class="quote-author">— Cliente fictício, BH/MG</p>
+          </article>
+
+          <article class="panel panel--quote">
+            <div class="quote-head">
+              <span class="quote-stars" aria-hidden="true">★★★★★</span>
+              <span class="quote-tag">Inadimplência</span>
+            </div>
+            <p class="quote">“A inadimplência ficou mensurável e a cobrança virou rotina — sem desgaste e sem improviso.”</p>
+            <p class="quote-author">— Cliente fictício, Contagem/MG</p>
+          </article>
+
+          <article class="panel panel--quote">
+            <div class="quote-head">
+              <span class="quote-stars" aria-hidden="true">★★★★★</span>
+              <span class="quote-tag">Indicadores</span>
+            </div>
+            <p class="quote">“Os indicadores passaram a fechar com conciliação. Hoje a diretoria confia nos números.”</p>
+            <p class="quote-author">— Cliente fictício, Betim/MG</p>
+          </article>
+
+          <article class="panel panel--quote">
+            <div class="quote-head">
+              <span class="quote-stars" aria-hidden="true">★★★★★</span>
+              <span class="quote-tag">Rotina</span>
+            </div>
+            <p class="quote">“A gestão deixou de depender de pessoas. A rotina ficou simples, com checklist e fechamento.”</p>
+            <p class="quote-author">— Cliente fictício, Ribeirão das Neves/MG</p>
+          </article>
+
+          <article class="panel panel--quote">
+            <div class="quote-head">
+              <span class="quote-stars" aria-hidden="true">★★★★★</span>
+              <span class="quote-tag">Crescimento</span>
+            </div>
+            <p class="quote">“Conseguimos crescer com critério, sem estourar caixa. Ficou claro o que pode e o que não pode.”</p>
+            <p class="quote-author">— Cliente fictício, Nova Lima/MG</p>
+          </article>
+
+          <article class="panel panel--quote">
+            <div class="quote-head">
+              <span class="quote-stars" aria-hidden="true">★★★★★</span>
+              <span class="quote-tag">Estratégia</span>
+            </div>
+            <p class="quote">“A consultoria trouxe visão executiva. A gente parou de apagar incêndio e começou a gerir.”</p>
+            <p class="quote-author">— Cliente fictício, São José da Lapa/MG</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="solucoes" class="section" aria-label="Soluções financeiras">
       <div class="container">
         <header class="section-head">
           <h2>Soluções financeiras (o que é estruturado)</h2>
@@ -164,7 +230,7 @@
       </div>
     </section>
 
-    <section id="como-funciona" class="section" aria-label="Como funciona">
+    <section id="como-funciona" class="section section--alt" aria-label="Como funciona">
       <div class="container">
         <header class="section-head">
           <h2>Como funciona</h2>
@@ -197,7 +263,7 @@
       </div>
     </section>
 
-    <section id="sobre" class="section section--alt" aria-label="Sobre">
+    <section id="sobre" class="section" aria-label="Sobre">
       <div class="container about-grid">
         <div class="about-copy">
           <header class="section-head">
@@ -237,7 +303,7 @@
       </div>
     </section>
 
-    <section id="contato" class="section" aria-label="Contato">
+    <section id="contato" class="section section--alt" aria-label="Contato">
       <div class="container contact-grid">
         <div>
           <header class="section-head">
@@ -324,7 +390,7 @@
       </div>
     </section>
 
-    <section id="privacidade" class="section section--alt" aria-label="Política de privacidade">
+    <section id="privacidade" class="section" aria-label="Política de privacidade">
       <div class="container">
         <header class="section-head">
           <h2>Política de privacidade (resumo)</h2>
@@ -349,8 +415,8 @@
 
       <div class="footer-links">
         <a href="#metodo-4e">Método 4E</a>
+        <a href="#depoimentos">Elogios</a>
         <a href="#solucoes">Soluções</a>
-        <a href="#como-funciona">Como funciona</a>
         <a href="#contato">Agendar</a>
       </div>
 
