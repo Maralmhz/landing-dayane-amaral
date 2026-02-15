@@ -524,14 +524,44 @@ input:focus{
 .reveal-delay-2{ transition-delay: .12s; }
 .reveal-delay-3{ transition-delay: .18s; }
 
-/* Mini gráficos (Sobre Dayane) */
-.mini-metrics{ display:grid; grid-template-columns: 1fr; gap: 10px; margin-top: 12px; }
-.metric-card{ padding: 12px; border-radius: 16px; border: 1px solid rgba(15,23,42,0.10); background: rgba(11,31,75,0.03); }
-.metric-head{ display:flex; justify-content: space-between; gap: 10px; align-items: baseline; }
-.metric-title{ font-weight: 850; font-size: 12.5px; color: rgba(11,31,75,0.95); }
-.metric-value{ font-weight: 900; font-size: 12.5px; color: rgba(29,78,216,0.98); }
+/* Mini gráficos (Sobre Dayane) — cards mais “premium” */
+.mini-metrics{ display:grid; grid-template-columns: 1fr; gap: 12px; margin-top: 14px; }
 
-.mini-chart{ width: 100%; height: 72px; margin-top: 8px; }
+.metric-card{
+  position: relative;
+  padding: 14px 14px 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(29, 78, 216, 0.12);
+  background:
+    radial-gradient(520px 160px at 12% 8%, rgba(29,78,216,0.16), transparent 55%),
+    radial-gradient(520px 160px at 86% 0%, rgba(11,31,75,0.14), transparent 52%),
+    rgba(255,255,255,0.92);
+  box-shadow: 0 12px 26px rgba(2,6,23,0.06);
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.metric-card:before{
+  content:"";
+  position:absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(135deg, rgba(11,31,75,0.06), rgba(11,31,75,0.06) 1px, transparent 1px, transparent 10px);
+  opacity: .22;
+  pointer-events:none;
+}
+
+.metric-card:hover{
+  transform: translateY(-3px);
+  border-color: rgba(29, 78, 216, 0.22);
+  box-shadow: 0 22px 52px rgba(2,6,23,0.14);
+}
+
+.metric-head{ position: relative; display:flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.metric-title{ font-weight: 900; font-size: 12.5px; color: rgba(11,31,75,0.92); }
+.metric-value{ font-weight: 950; font-size: 12.5px; color: rgba(29,78,216,0.98); }
+
+.mini-chart{ position: relative; width: 100%; height: 64px; margin-top: 10px; }
 .mini-chart .gridline{ stroke: rgba(15,23,42,0.10); stroke-width: 1; }
 
 .mini-chart path{
@@ -561,6 +591,8 @@ input:focus{
   .panel{ transition: none; }
   .panel:hover{ transform: none; }
   .reveal{ opacity: 1; transform: none; transition: none; }
+  .metric-card{ transition: none; }
+  .metric-card:hover{ transform: none; }
   .mini-chart path{ animation: none; stroke-dashoffset: 0; }
   .metric-card:hover .mini-chart path{ animation: none; }
 }
