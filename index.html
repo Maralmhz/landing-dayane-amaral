@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 
-  <meta name="theme-color" content="#0b1220" />
+  <meta name="theme-color" content="#1d4ed8" />
   <meta property="og:title" content="Dayane Amaral | Consultoria Estratégica Financeira Associativa" />
   <meta property="og:description" content="Gestão estratégica financeira exclusiva para associações de proteção veicular. Método 4E para previsibilidade, controle e expansão com base organizada." />
   <meta property="og:type" content="website" />
@@ -25,7 +25,15 @@
   <header class="site-header">
     <div class="container header-grid" aria-label="Cabeçalho">
       <div class="brand" aria-label="Marca">
-        <div class="logo" aria-label="Logotipo">
+        <!--
+          LOGO (opcional):
+          1) coloque seu arquivo em /assets/images/logo.svg (ou .png)
+          2) troque o src abaixo
+          Se não tiver logo-imagem, pode remover o <img> e manter só o tipográfico.
+        -->
+        <img class="brand__mark" src="assets/images/logo-placeholder.svg" alt="Marca Dayane Amaral (placeholder)" width="40" height="40" loading="eager" />
+
+        <div class="logo" aria-label="Logotipo tipográfico">
           <span class="logo__name">Dayane Amaral</span>
           <span class="logo__desc">Consultoria Estratégica Financeira Associativa</span>
         </div>
@@ -153,8 +161,9 @@
 
         <div class="about-photo" aria-label="Foto institucional">
           <figure class="photo">
-            <img src="assets/images/dayane-placeholder.jpg" alt="Foto institucional de Dayane Amaral (placeholder)" loading="lazy" width="840" height="980" />
-            <figcaption>Imagem placeholder elegante (substitua por foto real quando disponível).</figcaption>
+            <!-- FOTO: substitua este arquivo por uma foto real mantendo o mesmo nome, ou troque o src. -->
+            <img src="assets/images/dayane.jpg" alt="Foto institucional de Dayane Amaral" loading="lazy" width="840" height="980" onerror="this.onerror=null;this.src='assets/images/dayane-placeholder.jpg'" />
+            <figcaption>Substitua por uma foto real (meio corpo ou busto) para reforçar autoridade institucional.</figcaption>
           </figure>
         </div>
       </div>
