@@ -1,4 +1,29 @@
 (() => {
+  // Scroll reveal: anima entradas suaves por bloco (sem pesar)
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReduced) {
+    const revealEls = Array.from(document.querySelectorAll('[data-reveal]'));
+    revealEls.forEach((el, i) => {
+      el.classList.add('reveal');
+      el.classList.add(`reveal-delay-${Math.min(3, (i % 4))}`);
+    });
+
+    if ('IntersectionObserver' in window) {
+      const ro = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-in');
+            ro.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+
+      revealEls.forEach((el) => ro.observe(el));
+    } else {
+      revealEls.forEach((el) => el.classList.add('is-in'));
+    }
+  }
+
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
