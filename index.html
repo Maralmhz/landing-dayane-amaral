@@ -25,7 +25,7 @@
   <header class="site-header">
     <div class="container header-grid" aria-label="Cabeçalho">
       <div class="brand" aria-label="Marca">
-        <img class="brand__mark" src="/landing-dayane-amaral/assets/images/logo.png" alt="Marca Dayane Amaral" width="40" height="40" loading="eager" />
+        <img class="brand__mark" src="/landing-dayane-amaral/assets/images/logo.png" alt="Marca Dayane Amaral" width="56" height="56" loading="eager" />
 
         <div class="logo" aria-label="Logotipo tipográfico">
           <span class="logo__name">Dayane Amaral</span>
@@ -47,14 +47,14 @@
   </header>
 
   <main id="conteudo">
-    <!-- Hero: abre com Método 4E + foto -->
-    <section class="hero hero--4e" aria-label="Apresentação">
-      <div class="container hero-grid hero-grid--4e">
+    <!-- Hero: abertura mais limpa, com foto única -->
+    <section class="hero" aria-label="Apresentação">
+      <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Exclusivo para associações de proteção veicular</p>
-          <h1>Método 4E para previsibilidade financeira, governança e expansão com segurança.</h1>
+          <h1>Previsibilidade financeira e governança para a diretoria decidir com dados.</h1>
           <p class="subheadline">
-            Estrutura financeira associativa para reduzir inadimplência, organizar dados e sustentar decisões de diretoria com indicadores confiáveis.
+            Consultoria estratégica financeira associativa para reduzir inadimplência, organizar dados e sustentar expansão com base sólida.
           </p>
 
           <div class="hero-actions">
@@ -70,55 +70,43 @@
             <div class="pill">Diagnóstico (30 dias)</div>
             <div class="pill">Atendimento limitado</div>
           </div>
-
-          <div class="grid grid--4e" aria-label="Método 4E">
-            <article class="panel panel--big">
-              <h3>Examinar</h3>
-              <p>Leitura do cenário real: caixa, inadimplência, carteira, rotinas e confiabilidade dos dados.</p>
-            </article>
-            <article class="panel panel--big">
-              <h3>Estruturar</h3>
-              <p>Rotinas, conciliação e indicadores com regra de medição, fechamento e responsabilidades.</p>
-            </article>
-            <article class="panel panel--big">
-              <h3>Estabilizar</h3>
-              <p>Caixa projetado com cenários e controles para reduzir variação e urgência reativa.</p>
-            </article>
-            <article class="panel panel--big">
-              <h3>Expandir</h3>
-              <p>Critérios de crescimento e agenda de diretoria com indicadores para decisão e governança.</p>
-            </article>
-          </div>
         </div>
 
-        <aside class="hero-aside" aria-label="Foto e oferta">
-          <figure class="photo photo--hero">
+        <aside class="hero-aside" aria-label="Foto">
+          <figure class="photo">
             <img src="assets/images/dayane.jpeg" alt="Foto institucional de Dayane Amaral" loading="eager" width="980" height="1100" onerror="this.onerror=null;this.src='assets/images/dayane-placeholder.jpg'" />
           </figure>
-
-          <div class="card card--tight" aria-label="Resumo do diagnóstico">
-            <h2 class="card__title">Diagnóstico Estratégico (30 dias)</h2>
-            <p class="card__p">Mapeamento remunerado para enxergar a condição real, priorizar correções e orientar o plano de ação.</p>
-            <ul class="checklist" role="list">
-              <li>Projeção de caixa e cenários</li>
-              <li>Inadimplência real e carteira</li>
-              <li>Rotinas, indicadores e conciliação</li>
-              <li>Plano executivo com prioridades</li>
-            </ul>
-            <a class="btn btn--primary btn--full" href="#contato">Ver agenda</a>
-          </div>
         </aside>
       </div>
     </section>
 
-    <!-- Âncora Método 4E (mantida, agora como seção curta/explicativa) -->
-    <section id="metodo-4e" class="section section--compact" aria-label="Método 4E">
+    <!-- Seção única: foto (acima) + 4E em blocos grandes (aqui) -->
+    <section id="metodo-4e" class="section section--alt section--4e" aria-label="Método 4E">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow">Como a estrutura é construída</p>
-          <h2>Método 4E (visão executiva)</h2>
-          <p>O Método 4E aparece logo na abertura; aqui fica a leitura executiva do que muda na rotina financeira.</p>
+          <p class="eyebrow">Método próprio</p>
+          <h2>Método 4E (em blocos, fácil de entender)</h2>
+          <p>Quatro etapas objetivas para transformar gestão financeira em previsibilidade, governança e capacidade de expansão.</p>
         </header>
+
+        <div class="grid grid--4e" aria-label="Etapas do Método 4E">
+          <article class="panel panel--big">
+            <h3>Examinar</h3>
+            <p>Leitura do cenário real: caixa, inadimplência, carteira, rotinas e confiabilidade dos dados.</p>
+          </article>
+          <article class="panel panel--big">
+            <h3>Estruturar</h3>
+            <p>Rotinas, conciliação e indicadores com regra de medição, fechamento e responsabilidades.</p>
+          </article>
+          <article class="panel panel--big">
+            <h3>Estabilizar</h3>
+            <p>Caixa projetado com cenários e controles para reduzir variação e urgência reativa.</p>
+          </article>
+          <article class="panel panel--big">
+            <h3>Expandir</h3>
+            <p>Critérios de crescimento e agenda de diretoria com indicadores para decisão e governança.</p>
+          </article>
+        </div>
 
         <div class="panel panel--wide">
           <h3>O que a diretoria leva</h3>
@@ -128,7 +116,7 @@
     </section>
 
     <!-- Depoimentos / Elogios -->
-    <section id="depoimentos" class="section section--alt" aria-label="Elogios de clientes">
+    <section id="depoimentos" class="section" aria-label="Elogios de clientes">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">Validação social</p>
@@ -167,7 +155,7 @@
       </div>
     </section>
 
-    <section id="solucoes" class="section" aria-label="Soluções financeiras">
+    <section id="solucoes" class="section section--alt" aria-label="Soluções financeiras">
       <div class="container">
         <header class="section-head">
           <h2>Soluções financeiras (o que é estruturado)</h2>
@@ -203,7 +191,7 @@
       </div>
     </section>
 
-    <section id="como-funciona" class="section section--alt" aria-label="Como funciona">
+    <section id="como-funciona" class="section" aria-label="Como funciona">
       <div class="container">
         <header class="section-head">
           <h2>Como funciona</h2>
@@ -233,46 +221,6 @@
             </div>
           </li>
         </ol>
-      </div>
-    </section>
-
-    <section id="sobre" class="section" aria-label="Sobre">
-      <div class="container about-grid">
-        <div class="about-copy">
-          <header class="section-head">
-            <p class="eyebrow">Consultoria estratégica financeira associativa</p>
-            <h2>Atuação consultiva, executiva e orientada a governança.</h2>
-            <p>
-              Atuação exclusiva no setor associativo de proteção veicular, com foco em estruturar gestão financeira como base de decisão.
-              O objetivo é previsibilidade, disciplina de indicadores e governança para sustentar crescimento com risco controlado.
-            </p>
-          </header>
-
-          <ul class="authority" role="list">
-            <li>
-              <span class="authority__k">Experiência no setor</span>
-              <span class="authority__v">Vivência na rotina financeira associativa e na interface com diretoria e gestão.</span>
-            </li>
-            <li>
-              <span class="authority__k">Atendimento limitado</span>
-              <span class="authority__v">Poucas associações simultaneamente para garantir profundidade e acompanhamento real.</span>
-            </li>
-            <li>
-              <span class="authority__k">Método 4E</span>
-              <span class="authority__v">Examinar, Estruturar, Estabilizar e Expandir com base organizada.</span>
-            </li>
-          </ul>
-
-          <div class="note">
-            <p><strong>Posicionamento:</strong> consultoria estratégica (não terceirização operacional e não “pacote pronto”).</p>
-          </div>
-        </div>
-
-        <div class="about-photo" aria-label="Foto institucional">
-          <figure class="photo photo--imposing">
-            <img src="assets/images/dayane.jpeg" alt="Foto institucional de Dayane Amaral" loading="lazy" width="980" height="1100" onerror="this.onerror=null;this.src='assets/images/dayane-placeholder.jpg'" />
-          </figure>
-        </div>
       </div>
     </section>
 
