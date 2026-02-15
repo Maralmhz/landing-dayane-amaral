@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1400" viewBox="0 0 1200 1400" role="img" aria-label="Placeholder institucional">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0e172a"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1400" fill="url(#bg)"/>
+
+  <circle cx="300" cy="280" r="220" fill="rgba(45,212,191,0.08)"/>
+  <circle cx="920" cy="340" r="260" fill="rgba(34,197,94,0.08)"/>
+
+  <rect x="140" y="180" width="920" height="980" rx="64" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+
+  <path d="M600 460c98 0 178 80 178 178s-80 178-178 178-178-80-178-178 80-178 178-178z" fill="rgba(255,255,255,0.06)"/>
+  <path d="M316 1100c72-158 212-256 384-256s312 98 384 256" fill="rgba(255,255,255,0.06)"/>
+
+  <text x="600" y="1240" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="34" font-weight="650" fill="rgba(255,255,255,0.78)">Foto institucional</text>
+  <text x="600" y="1290" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="18" font-weight="500" fill="rgba(255,255,255,0.55)">Substitua por uma imagem real (meio corpo ou busto)</text>
+
+  <rect x="470" y="250" width="260" height="6" rx="6" fill="url(#acc)" opacity="0.85"/>
+</svg>
